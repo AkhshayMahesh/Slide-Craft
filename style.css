@@ -1,0 +1,254 @@
+body {
+  color: white;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  justify-content: space-around;
+}
+
+h1,
+h2 {
+  font-family: new;
+  font-size: 8.5vmin;
+  text-align: center;
+  margin: 2vmin 0;
+  color: #9B9B9B;
+}
+
+h2 {
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 5vmin;
+}
+
+dialog {
+  background-color: white;
+  border-radius: 2vmin;
+  border: none;
+  padding: 4vmin;
+  animation: dialog 0.8s;
+  animation-iteration-count: 1;
+}
+
+.container {
+  display: grid;
+  width: 50vmin;
+  height: 50vmin;
+  border-radius: 2vmin;
+  padding: 2vmin;
+  background-color: #ff0b59;
+  opacity: 0.9;
+}
+
+.square {
+  margin: 0.3vmin;
+  border-radius: 0.5vmin;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 24px;
+  transition: unset 1s;
+  border: 1px #9B9B9B;
+}
+
+.imgNum {
+  display: block;
+  border: none;
+
+}
+
+#icons {
+  display: flex;
+  margin-top: 5vmin;
+  justify-content: space-between;
+  width: 64vmin;
+}
+
+#icons>button,
+.item,
+.item1,
+.item2 {
+  border-radius: 50%;
+  background-color: #9B9B9B;
+  text-decoration: none;
+  border: none;
+  height: 10vmin;
+  width: 10vmin;
+  cursor: pointer;
+  color: white;
+  transition: transform 600ms ease-out;
+  text-align: center;
+  font-weight: 900;
+}
+
+.menu,
+.menu1,
+.menu2 {
+  position: relative;
+  width: 10vmin;
+  overflow: visible;
+}
+
+.item,
+.item1,
+.item2 {
+  position: absolute;
+}
+
+.item.open-menu,
+.item1.open-menu1,
+.item2.open-menu2 {
+  z-index: 1;
+  transition: transform 300ms ease-out;
+  transition-delay: 300ms;
+  position: absolute;
+}
+
+.pink {
+  background-color: #ff0b59;
+}
+
+.opened .item:nth-child(2) {
+  transform: translateX(-7vmin) translateY(12.25vmin);
+}
+
+.opened .item:nth-child(3) {
+  transform: translateX(7vmin) translateY(12.25vmin);
+}
+
+.item:nth-child(2) {
+  transition-delay: 0;
+}
+
+.item:nth-child(3) {
+  transition-delay: 150ms;
+}
+
+.opened .item1:nth-child(2) {
+  transform: translateX(14vmin);
+}
+
+.opened .item1:nth-child(3) {
+  transform: translateX(-7vmin) translateY(12.25vmin);
+}
+
+.opened .item1:nth-child(4) {
+  transform: translateX(7vmin) translateY(12.25vmin);
+}
+
+.item1:nth-child(2) {
+  transition-delay: 0;
+}
+
+.item1:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.item1:nth-child(4) {
+  transition-delay: 100ms;
+}
+
+.opened .item2:nth-child(2) {
+  transform: translateX(-14vmin);
+}
+
+.opened .item2:nth-child(3) {
+  transform: translateX(7vmin) translateY(12.25vmin);
+}
+
+.opened .item2:nth-child(4) {
+  transform: translateX(-7vmin) translateY(12.25vmin);
+}
+
+.item2:nth-child(2) {
+  transition-delay: 0;
+}
+
+.item2:nth-child(3) {
+  transition-delay: 200ms;
+}
+
+.item2:nth-child(4) {
+  transition-delay: 100ms;
+}
+
+.playagain {
+  border: none;
+  padding: 1.5vmin 3vmin;
+  border: none;
+  border-radius: 1vmin;
+  font-size: 3vmin;
+  cursor: pointer;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* background-color: rgb(1, 69, 255); */
+  background-color: #ff0b59;
+  color: white;
+}
+
+.playagain:hover {
+  transform: scale(1.05);
+}
+
+input {
+  margin: 3vmin;
+}
+
+.size>h1,
+#solved>h1,
+#over>h1,
+#saved>h1 {
+  color: #ff0b59;
+}
+
+.icons1 {
+  margin-top: 4vmin;
+  display: flex;
+  justify-content: space-around;
+  /* width: 75%; */
+}
+
+.sizes {
+  background-color: #ff0b59;
+  text-decoration: none;
+  border: none;
+  border-radius: 1vmin;
+  height: 10vmin;
+  width: 10vmin;
+  cursor: pointer;
+  color: white;
+  transition: transform 600ms ease-out;
+  text-align: center;
+  font-weight: 900;
+  font-size: larger;
+}
+
+#load1 {
+  /* visibility: hidden; */
+  color: #9B9B9B;
+}
+
+@keyframes dialog {
+  0% {
+    transform: scale(0);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 1079px){
+  body{
+      margin-top: 20vmin;
+      margin-bottom: auto;
+  }
+}

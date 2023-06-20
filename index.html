@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Slide Craft</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <style>
+    @font-face {
+      font-family: "new";
+      src: url(Hello\ Valentina.ttf);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="main">
+    <h1>Slide Craft</h1>
+    <div class="container" id="container"></div>
+    <!-- <div id="load">This Might take several minutes</div> -->
+    <div class="icons" id="icons">
+      <div class="menu2">
+        <button onclick="" class="item2 open-menu2">Load</button>
+        <button onclick="loadState(1)" class="item2 pink">Slot 1</button>
+        <button onclick="loadState(3)" class="item2 pink">Slot 3</button>
+        <button onclick="loadState(2)" class="item2 pink">Slot 2</button>
+      </div>
+      
+      <button onclick="shuffleBoard()">Shuffle</button>
+      <div class="menu">
+        <button onclick="" class="item open-menu">Upload</button>
+        <button onclick="openfile()" class="item pink">File</button>
+        <button onclick="openurl()" class="item pink">URL</button>
+      </div>
+      <button onclick="solveIt()">Solve</button>
+      <div class="menu1">
+        <button onclick="" class="item1 open-menu1">Save</button>
+        <button onclick="saveState(1)" class="item1 pink">Slot 1</button>
+        <button onclick="saveState(3)" class="item1 pink">Slot 3</button>
+        <button onclick="saveState(2)" class="item1 pink">Slot 2</button>
+      </div>
+    </div>
+  </div>
+
+  <dialog class="url" id="url">
+    <h2>Upload Image using URL</h2>
+    <input type="url" id="image-url" placeholder="Enter image URL">
+    <div style="display: flex;justify-content: center;"><button class="playagain" onclick="closeModals()">OK</button></div>
+  </dialog>
+
+  <dialog class="browse" id="browse">
+    <h2>Upload Image from System files</h2>
+    <input type="file" id="image-upload" accept="image/*">
+    <div style="display: flex;justify-content: center;"><button class="playagain" onclick="closeModals()">OK</button></div>
+  </dialog>
+
+  <dialog class="size" id="size">
+    <h1>Slide Craft</h1>
+    <h2>Choose the Board Size</h2>
+    <div class="icons1" id="icons1">
+      <button class="sizes" id="" onclick="size(3)">3</button>
+      <button class="sizes" id="" onclick="size(4)">4</button>
+      <button class="sizes" id="" onclick="size(5)">5</button>
+    </div>
+    <br>**The SOLVE function might take several minutes
+  </dialog>
+
+  <dialog id="load1">
+    This might take several minutes
+  </dialog>
+
+  <dialog id="over">
+    <h1>Slide Craft</h1>
+    <h2>You Successfully solved the Puzzle!!</h2><br>
+    <div style="display: flex;justify-content: center;"><button class="playagain" onclick="window.location.reload()">New Puzzle</button></div>
+  </dialog>
+
+  <dialog id="solved">
+    <h1>Slide Craft</h1>
+    <h2>Puzzle solved successfully!!</h2><br>
+    <div style="display: flex;justify-content: center;"><button class="playagain" onclick="window.location.reload()">New Puzzle</button></div>
+  </dialog>
+
+  <dialog id="saved">
+    <h1>Slide Craft</h1>
+    <h2 id="msg">Puzzle saved successfully in Slot</h2><br>
+    <div style="display: flex;justify-content: center;"><button class="playagain" onclick="window.location.reload()">New Puzzle</button></div>
+  </dialog>
+
+
+  <script src="script(1).js"></script>
+</body>
+</html>
