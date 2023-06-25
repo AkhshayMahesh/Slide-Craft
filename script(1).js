@@ -91,7 +91,7 @@ function saveState(n) {
             stateArr.push(null)
         }
     }
-    stateArr.splice(n, 0, currState)
+    stateArr.splice(n, 1, currState)
     localStorage.setItem("stateArr", JSON.stringify(stateArr));
     imageUrl = ''
     // reset()
